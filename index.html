@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EJBAGS | Bolsos Elegantes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ICONOS REDES -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+
+<div id="toast" class="toast">
+  Producto agregado al carrito 👜
+</div>
+
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="EJBAGS Logo">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- MENÚ -->
+    <nav class="nav-menu">
+      <a href="#">Inicio</a>
+      <a href="#coleccion">Colección</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contacto</a>
+      
+    </nav>
+    <!-- CARRITO FLOTANTE -->
+<div class="cart-float" onclick="openCart()">
+  <span class="cart-icon">🛒</span>
+  <span id="cart-count">0</span>
+</div>
+
+
+    <!-- IDIOMA -->
+    <div class="language-switch">
+      <button onclick="setLanguage('es')">ES</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+
+    <!-- REDES SOCIALES -->
+<div class="social-icons">
+  <a href="https://www.instagram.com/ejbags.oficial?igsh=bjNvMHB0cXlvc2pj" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://wa.me/573012537443?text=Hola%20👋💖%20Estoy%20interesada%20en%20los%20bolsos%20de%20EJBAGS%20y%20me%20gustaría%20recibir%20más%20información%20✨👜"
+   target="_blank"
+   class="social-icon whatsapp">
+   <i class="fab fa-whatsapp"></i>
+</a>
+</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-home fade in">
+
+    <!-- VIDEO INTRO -->
+  <div class="hero-video">
+    <video id="introVideo" autoplay muted playsinline>
+      <source src="video/intro.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div class="hero-content"> 
+    <h1
+      data-es="Elegancia que trasciende el tiempo"
+      data-en="Elegance that transcends time">
+      Elegancia que trasciende el tiempo
+    </h1>
+
+    <a href="#coleccion" class="btn"
+      data-es="Ver colección"
+      data-en="View collection">
+      Ver colección
+    </a>
+    </div>
+  </section>
+
+  
+
+  <!-- BENEFICIOS -->
+<section class="benefits fade-in">
+  <div class="benefit">
+    <h3>Diseño elegante</h3>
+    <p>Bolsos pensados para destacar tu estilo.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Calidad premium</h3>
+    <p>Materiales seleccionados con detalle.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Compra fácil</h3>
+    <p>Pedido directo por WhatsApp.</p>
+  </div>
+</section>
+
+  <!-- COLECCIÓN -->
+  <section class="products fade-in" id="coleccion">
+    <h2
+      data-es="Nuestra Colección"
+      data-en="Our Collection">
+      Nuestra Colección
+    </h2>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="assets/images/bolso1.jpg" alt="Bolso Elegante Negro">
+        <h3>Bolso Elegante Negro</h3>
+        <p class="price">$320.000 COP</p>
+        <button onclick="addToCart('Bolso Elegante Negro', 320000)"
+          data-es="Comprar"
+          data-en="Buy">
+          Comprar
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/images/bolso2.jpg" alt="Bolso Beige Clásico">
+        <h3>Bolso Beige Clásico</h3>
+        <p class="price">$350.000 COP</p>
+        <button onclick="addToCart('Bolso Beige Clásico', 350000)"
+          data-es="Comprar"
+          data-en="Buy">
+          Comprar
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/images/bolso3.jpg" alt="Bolso Dorado Premium">
+        <h3>Bolso Dorado Premium</h3>
+        <p class="price">$420.000 COP</p>
+        <button onclick="addToCart('Bolso Dorado Premium', 420000)"
+          data-es="Comprar"
+          data-en="Buy">
+          Comprar
+        </button>
+      </div>
+
+    </div>
+  </section>
+  <!-- ABOUT -->
+<section id="about" class="about fade-in">
+  <div class="about-content">
+
+    <h2>Sobre EJBAGS</h2>
+
+    <p>
+      En <strong>EJBAGS</strong> creemos que un bolso no es solo un accesorio,
+      es una extensión de tu estilo y personalidad.
+    </p>
+
+    <p>
+      Seleccionamos cuidadosamente cada diseño para ofrecer bolsos elegantes,
+      modernos y funcionales, pensados para mujeres que valoran la calidad
+      y los detalles.
+    </p>
+
+    <p>
+      Nuestro compromiso es brindarte una experiencia de compra segura,
+      con atención personalizada y envíos a toda Colombia.
+    </p>
+
+    
+
+  </div>
+</section>
+
+  
+  <!-- OVERLAY -->
+<div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+<!-- CARRITO LATERAL -->
+<aside id="cart-panel" class="cart-panel fade-in">
+  <div class="cart-header">
+    <h2 data-es="Carrito" data-en="Shopping Cart">Carrito</h2>
+    <button class="close-cart" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cart-items"></ul>
+
+  <p id="cart-total"
+     data-es="Total: $0 COP"
+     data-en="Total: $0 COP">
+     Total: $0 COP
+  </p>
+
+  <button onclick="checkout()" class="btn"
+    data-es="Comprar por WhatsApp"
+    data-en="Buy via WhatsApp">
+    Comprar por WhatsApp
+  </button>
+</aside>
+
+<!-- CONTACTO -->
+<section id="contact" class="contact fade-in">
+  <h2>Contacto</h2>
+
+  <p class="contact-text">
+    ¿Tienes alguna pregunta o quieres ayuda para elegir tu bolso ideal?
+    Escríbenos y con gusto te ayudamos 💜
+  </p>
+
+  <div class="contact-buttons">
+    <a
+      href="https://wa.me/573012537443?text=Hola%20💜%20Estoy%20interesada%20en%20los%20bolsos%20de%20EJBAGS%20y%20me%20gustaría%20recibir%20más%20información%20✨👜"
+      target="_blank"
+      class="whatsapp-btn"
+    >
+      💬 Escríbenos por WhatsApp
+    </a>
+
+    <a
+      href="https://www.instagram.com/ejbags.oficial"
+      target="_blank"
+      class="instagram-btn"
+    >
+      📸 Síguenos en Instagram
+    </a>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer fade-in">
+    <p
+      data-es="© 2026 EJBAGS. Todos los derechos reservados."
+      data-en="© 2026 EJBAGS. All rights reserved.">
+      © 2026 EJBAGS. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <!-- BANNER COOKIES -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Utilizamos cookies para mejorar tu experiencia en EJBAGS.
+    Puedes aceptar o rechazar su uso.
+  </p>
+
+  <div class="cookie-buttons">
+    <button class="btn-accept" onclick="acceptCookies()">Aceptar</button>
+    <button class="btn-decline" onclick="declineCookies()">No aceptar</button>
+  </div>
+</div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
