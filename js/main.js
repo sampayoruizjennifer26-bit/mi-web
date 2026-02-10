@@ -69,7 +69,7 @@ function checkout() {
   message += `\n💰 *Total:* $${total.toLocaleString()} COP\n\n`;
   message += "Quedo atento(a) para confirmar disponibilidad y envío. 🤍";
 
-  window.open(`https://wa.me/573012537443?text=${encodeURIComponent(message)}`);
+  window.open(`https://wa.me/573218094980?text=${encodeURIComponent(message)}`);
 }
 function toggleMenu() {
   document.querySelector('.nav-menu').classList.toggle('active');
