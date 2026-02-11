@@ -1153,4 +1153,21 @@ h1, h2, h3 {
 }
 }
 
+.agotado {
+  background-color: #e8c1ff;
+  color: #5a007a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+}
+
+.btn-agotado {
+  background-color: #d9d9d9;
+  color: #666;
+  cursor: not-allowed;
+  border: none;
+}
+
 
