@@ -1208,4 +1208,53 @@ h1, h2, h3 {
 
 }
 
+/* HEADER SOLO PARA CELULAR */
+@media (max-width: 768px) {
+
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  /* MENÚ IZQUIERDA */
+  .menu-toggle {
+    order: 1;
+    font-size: 1.8rem;
+    z-index: 10;
+  }
+
+  /* LOGO CENTRADO */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  /* REDES DERECHA */
+  .social-icons {
+    order: 3;
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    font-size: 1.4rem;
+    color: black;
+  }
+
+  /* OCULTAMOS EN CELULAR LO QUE NO QUEREMOS ARRIBA */
+  .language-switch,
+  .cart-float {
+    display: none;
+  }
+
+}
+
 
