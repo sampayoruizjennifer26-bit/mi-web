@@ -186,3 +186,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
   });
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+const overlay = document.querySelector(".overlay");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+  overlay.classList.remove("active");
+});
