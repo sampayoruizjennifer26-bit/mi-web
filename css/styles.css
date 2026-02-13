@@ -295,11 +295,7 @@ h1, h2, h3 {
 /* ================= RESPONSIVE MÓVIL ================= */
 @media (max-width: 768px) {
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+  
 
   .logo img {
     max-width: 90px;
