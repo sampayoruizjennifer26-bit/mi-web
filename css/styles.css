@@ -197,8 +197,9 @@ h1, h2, h3 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
 }
 
  .product-card {
@@ -222,8 +223,8 @@ h1, h2, h3 {
 .product-card img {
   width: 100%;
   height: auto;
-  max-height: 320px;
-  object-fit: contain;
+  height: 250px;
+  object-fit: cover;
   border-bottom: 1px solid #eee;
 }
 
@@ -254,6 +255,8 @@ h1, h2, h3 {
   border-color: var(--gold);
   transform: translateY(-2px);
 }
+
+
 
 /* ================= CARRITO ================= */
 .cart {
@@ -920,7 +923,7 @@ h1, h2, h3 {
 }
 /* HERO INICIO */
 .hero-home {
-  min-height: 75vh;
+  min-height: 100vh;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -936,10 +939,11 @@ h1, h2, h3 {
   background: none;
   padding: 0;
   border-radius: 0;
+  margin-top: 100px;
 }
 
 .hero-content h1 {
-  color: rgba(106, 8, 109, 0.808); /* TEXTO NEGRO */
+  color: rgba(196, 33, 196, 0.808); /* TEXTO NEGRO */
   font-size: 3.6rem;
   margin-bottom: 25px;
 
@@ -1318,8 +1322,37 @@ h1, h2, h3 {
 @media (min-width: 769px) and (max-width: 1023px) {
   .language-switch {
     display: none !important;
+  }/* ================= PRODUCTOS RESPONSIVE PREMIUM ================= */
+
+/* TABLET */
+@media (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* CELULAR */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+}
+}
+
+
 
 
 

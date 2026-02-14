@@ -165,25 +165,7 @@ function checkCookies() {
 // Ejecutar al cargar la página
 checkCookies();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const video = document.getElementById("introVideo");
-  const videoContainer = document.querySelector(".hero-video");
 
-  if (!video || !videoContainer) return;
-
-  // Cuando el video termina
-  video.addEventListener("ended", () => {
-    videoContainer.classList.add("hide");
-  });
-
-  // Asegurar autoplay real
-  video.play().catch(() => {
-    // Si el navegador bloquea el autoplay
-    setTimeout(() => {
-      videoContainer.classList.add("hide");
-    }, 5000);
-  });
-});
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
