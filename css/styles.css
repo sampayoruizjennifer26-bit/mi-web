@@ -222,8 +222,7 @@ h1, h2, h3 {
 
 .product-card img {
   width: 100%;
-  height: auto;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
 }
@@ -1354,11 +1353,18 @@ h1, h2, h3 {
 
 /* ================= PRODUCTOS RESPONSIVE PERFECTO ================= */
 
-@media (max-width: 768px) {
-
+/* TABLET */
+@media (max-width: 1023px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en celular */
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .product-card {
@@ -1381,10 +1387,9 @@ h1, h2, h3 {
   }
 
   .product-card img {
-    max-height: 180px;
-    object-fit: contain;
+    height: 150px;
+    object-fit: cover;
   }
-
 }
 
 
