@@ -71,9 +71,7 @@ function checkout() {
 
   window.open(`https://wa.me/573218094980?text=${encodeURIComponent(message)}`);
 }
-function toggleMenu() {
-  document.querySelector('.nav-menu').classList.toggle('active');
-}
+
 function showToast() {
   const toast = document.getElementById("toast");
   toast.classList.add("show");
