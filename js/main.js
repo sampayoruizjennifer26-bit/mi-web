@@ -208,3 +208,19 @@ navLinks.forEach(link => {
     overlay.classList.remove("active");
   });
 });
+
+// OCULTAR HEADER AL BAJAR - MOSTRAR AL SUBIR
+let lastScrollTop = 0;
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    header.classList.add("hide"); // bajando
+  } else {
+    header.classList.remove("hide"); // subiendo
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});

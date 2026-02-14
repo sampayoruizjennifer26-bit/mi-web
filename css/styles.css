@@ -61,6 +61,15 @@ h1, h2, h3 {
   z-index: 1000;
 }
 
+/* ANIMACIÓN HEADER AL SCROLL */
+.header {
+  transition: transform 0.4s ease;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+}
+
 /* LOGO */
 .logo img {
   display: block;
