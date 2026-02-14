@@ -1321,7 +1321,7 @@ h1, h2, h3 {
 @media (min-width: 769px) and (max-width: 1023px) {
   .language-switch {
     display: none !important;
-  }/* ================= PRODUCTOS RESPONSIVE PREMIUM ================= */
+  }
 
 /* TABLET */
 @media (max-width: 1023px) {
