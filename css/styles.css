@@ -20,6 +20,8 @@ body {
   color: var(--black);
   line-height: 1.6;
   font-weight: 400;
+
+  padding-top: 90px;
 }
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -56,13 +58,13 @@ h1, h2, h3 {
   padding: 20px 60px;
   background: #f5f0ea;
   border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-/* ANIMACIÓN HEADER AL SCROLL */
-.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
   transition: transform 0.4s ease;
 }
 

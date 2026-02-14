@@ -209,7 +209,6 @@ navLinks.forEach(link => {
   });
 });
 
-// HEADER INTELIGENTE AL SCROLL
 document.addEventListener("DOMContentLoaded", () => {
 
   let lastScrollTop = 0;
@@ -219,14 +218,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
 
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScrollTop && currentScroll > 120) {
-      // Bajando
-      header.classList.add("hide");
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      header.style.transform = "translateY(-100%)";
     } else {
-      // Subiendo
-      header.classList.remove("hide");
+      header.style.transform = "translateY(0)";
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
