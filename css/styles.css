@@ -1352,6 +1352,41 @@ h1, h2, h3 {
 }
 }
 
+/* ================= PRODUCTOS RESPONSIVE PERFECTO ================= */
+
+@media (max-width: 768px) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en celular */
+    gap: 20px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .product-card button {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .product-card img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+}
+
 
 
 
