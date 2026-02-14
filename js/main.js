@@ -209,18 +209,28 @@ navLinks.forEach(link => {
   });
 });
 
-// OCULTAR HEADER AL BAJAR - MOSTRAR AL SUBIR
-let lastScrollTop = 0;
-const header = document.querySelector(".header");
+// HEADER INTELIGENTE AL SCROLL
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  let lastScrollTop = 0;
+  const header = document.querySelector(".header");
 
-  if (currentScroll > lastScrollTop) {
-    header.classList.add("hide"); // bajando
-  } else {
-    header.classList.remove("hide"); // subiendo
-  }
+  if (!header) return;
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  window.addEventListener("scroll", () => {
+
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 120) {
+      // Bajando
+      header.classList.add("hide");
+    } else {
+      // Subiendo
+      header.classList.remove("hide");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+  });
+
 });
