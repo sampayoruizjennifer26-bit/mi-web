@@ -1230,7 +1230,7 @@ h1, h2, h3 {
   }
 
   /* Ocultamos lo que no queremos arriba */
-  .nav-menu,
+  
   .language-switch,
   .cart-float {
     display: none;
@@ -1273,6 +1273,7 @@ h1, h2, h3 {
 }
 
 }
+
 
 
 
