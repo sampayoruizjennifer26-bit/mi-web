@@ -305,19 +305,7 @@ h1, h2, h3 {
     display: block;
   }
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 20px;
-    padding: 20px 0;
-    position: static;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
+  
 
   .hero {
     padding: 80px 20px;
