@@ -1207,6 +1207,10 @@ h1, h2, h3 {
 /* HEADER CELULAR PERFECTO */
 @media (max-width: 768px) {
 
+  body {
+  padding-top: 70px;
+}
+
   .header {
     display: flex;
     align-items: center;
