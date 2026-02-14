@@ -1296,6 +1296,13 @@ h1, h2, h3 {
 
 }
 
+/* OCULTAR ES / EN EN TABLET */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .language-switch {
+    display: none !important;
+  }
+}
+
 
 
 
