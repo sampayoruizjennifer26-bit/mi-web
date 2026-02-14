@@ -200,3 +200,13 @@ overlay.addEventListener("click", () => {
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+// CERRAR MENÚ AL HACER CLICK EN UN LINK
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
