@@ -1245,8 +1245,7 @@ h1, h2, h3 {
 
   /* Ocultamos lo que no queremos arriba */
   
-  .language-switch,
-  .cart-float {
+  .language-switch {
     display: none;
   }
 

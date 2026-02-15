@@ -214,25 +214,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// MODAL IMAGEN PRODUCTO
-const images = document.querySelectorAll(".product-card img");
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-const closeModal = document.querySelector(".close-modal");
+document.addEventListener("DOMContentLoaded", function () {
 
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-  });
-});
+  const images = document.querySelectorAll(".product-card img");
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeModal = document.querySelector(".close-modal");
 
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  if (images.length > 0 && modal && modalImg && closeModal) {
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
   }
+
 });
