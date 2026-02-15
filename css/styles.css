@@ -1322,34 +1322,9 @@ h1, h2, h3 {
   .language-switch {
     display: none !important;
   }
-
-/* TABLET */
-@media (max-width: 1023px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-/* CELULAR */
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
 
-  .product-card {
-    padding: 15px;
-  }
-
-  .product-card h3 {
-    font-size: 0.95rem;
-  }
-
-  .price {
-    font-size: 0.9rem;
-  }
-}
-}
 
 /* ================= PRODUCTOS RESPONSIVE PERFECTO ================= */
 
