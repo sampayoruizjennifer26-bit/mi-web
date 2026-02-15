@@ -1364,7 +1364,7 @@ h1, h2, h3 {
   }
 
   .product-card img {
-    height: 165px;
+    height: 200px;
     object-fit: cover;
   }
 }
