@@ -180,7 +180,7 @@ h1, h2, h3 {
 /* ================= PRODUCTOS ================= */
 .products {
   padding: 80px 40px;
-  background: var(--white);
+  background: whitesmoke;
   text-align: center;
 }
 
@@ -198,21 +198,18 @@ h1, h2, h3 {
 }
 
  .product-card {
-  background: var(--white);
-  border: 1px solid #eee;
+  background: #f8f4ec;
+  border: 1px solid #d4af37;
   padding: 20px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
 }
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
+
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.25);
 }
 
 .product-card img {
@@ -523,6 +520,7 @@ h1, h2, h3 {
   border: none;
   font-size: 22px;
   cursor: pointer;
+  color: #000;
 }
 
 /* LISTA */
@@ -799,7 +797,7 @@ h1, h2, h3 {
 
 /* ================= ABOUT ================= */
 .about {
-  background: var(--beige);
+  background: whitesmoke;
   padding: 80px 20px;
   text-align: center;
 }
@@ -1371,3 +1369,60 @@ h1, h2, h3 {
 
 
 
+
+
+/* ================= SLIDER MARCA ================= */
+
+.brand-slider {
+  padding: 80px 20px;
+  background: #f5f0ea;
+  text-align: center;
+}
+
+.brand-slider h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.slider {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: #d4af37; /* dorado elegante */
+}
