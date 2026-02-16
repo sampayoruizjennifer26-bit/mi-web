@@ -1426,3 +1426,123 @@ h1, h2, h3 {
 .dot.active {
   background: #d4af37; /* dorado elegante */
 }
+
+.btn-ver-bolsos {
+  background-color: black; /* dorado elegante */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-ver-bolsos:hover {
+  background-color: #b9962e;
+}
+
+/* FONDO OSCURO */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* TARJETA */
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 10000;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #000000; /* negro */
+  color: #ffffff; /* blanco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* bordes suaves */
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.close:hover {
+  background-color: #333333;
+}
+
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.quantity-selector {
+  margin: 15px 0;
+}
+
+.quantity-selector button {
+  padding: 5px 12px;
+  font-size: 18px;
+}
+
+.btn-cart {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-cart:hover {
+  background-color: gray;
+}
+
+.btn-buy {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-buy:hover {
+  background-color: #333;
+}

@@ -39,13 +39,15 @@ function updateCart() {
     li.innerHTML = `
       <span>${item.name}</span>
       <div>
-        <button onclick="changeQty(${index}, -1)">−</button>
-        <span>${item.qty}</span>
-        <button onclick="changeQty(${index}, 1)">+</button>
+         <button onclick="changeCartQty(${index}, -1)">−</button>
+         <span>${item.qty}</span>
+         <button onclick="changeCartQty(${index}, 1)">+</button>
       </div>
       <strong>$${(item.price * item.qty).toLocaleString()} COP</strong>
       <button class="remove-item" onclick="removeItem(${index})">x</button>
     `;
+
+    
 
     cartItems.appendChild(li);
   });
@@ -101,7 +103,7 @@ function closeCart() {
   document.getElementById("cart-panel").classList.remove("open");
   document.getElementById("cart-overlay").classList.remove("show");
 }
-function changeQty(index, change) {
+function changeCartQty(index, change) {
   cart[index].qty += change;
 
   if (cart[index].qty <= 0) {
@@ -214,35 +216,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
 
-  const images = document.querySelectorAll(".product-card img");
-  const modal = document.getElementById("image-modal");
-  const modalImg = document.getElementById("modal-img");
-  const closeModal = document.querySelector(".close-modal");
 
-  if (images.length > 0 && modal && modalImg && closeModal) {
 
-    images.forEach(img => {
-      img.addEventListener("click", () => {
-        modal.style.display = "flex";
-        modalImg.src = img.src;
-      });
-    });
-
-    closeModal.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-
-  }
-
-});
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
@@ -257,3 +233,81 @@ setInterval(() => {
   slides[current].classList.add("active");
   dots[current].classList.add("active");
 }, 4000);
+
+function toggleBolsos() {
+  const bolsos = document.getElementById("listaBolsos");
+  const boton = document.getElementById("btnBolsos");
+
+  if (bolsos.style.display === "none") {
+    bolsos.style.display = "grid";
+    boton.textContent = "Ocultar Bolsos";
+  } else {
+    bolsos.style.display = "none";
+    boton.textContent = "Ver Bolsos";
+  }
+}
+
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalPrice = document.getElementById("modalPrice");
+const modalQty = document.getElementById("modalQty");
+
+let quantity = 1;
+
+let currentProduct = {
+    title: "",
+    price: 0
+};
+
+
+function openModal(image, title, price) {
+    modal.style.display = "flex";
+    modalImage.src = image;
+    modalTitle.textContent = title;
+    modalPrice.textContent = price;
+
+    currentProduct.title = title;
+    currentProduct.price = parseInt(price.replace(/[^0-9]/g, ""));
+
+    quantity = 1;
+    modalQty.textContent = quantity;
+}
+
+function changeQty(amount) {
+  quantity += amount;
+  if (quantity < 1) quantity = 1;
+  modalQty.textContent = quantity;
+}
+
+
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+function addToCartFromModal() {
+    addToCart(currentProduct.title, currentProduct.price * quantity);
+    closeModal();
+}
+
+function buyNow() {
+
+  const telefono = "573218094980"; // ← AQUÍ pon tu número real con código país (57 Colombia)
+  
+  const mensaje = `Hola, quiero comprar:
+Producto: ${currentProduct.title}
+Cantidad: ${quantity}
+Total: $${currentProduct.price * quantity} COP`;
+
+  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+  window.open(url, "_blank");
+
+}
