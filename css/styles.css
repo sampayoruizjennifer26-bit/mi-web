@@ -1106,8 +1106,8 @@ h1, h2, h3 {
 @media (max-width: 768px) {
 
   .hero-home {
-    min-height: 70vh; 
-    background-position: left center;
+    min-height: 65vh; 
+    background-position: center top;
     background-size: cover;
   }
 
