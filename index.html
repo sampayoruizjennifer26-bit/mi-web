@@ -165,181 +165,205 @@
 
 
    <!-- COLECCIÓN -->
-  <section class="products fade-in" id="coleccion">
-    <h2
-      data-es="Nuestra Colección"
-      data-en="Our Collection">
-      Nuestra Colección
-    </h2>
-    <button class="btn-ver-bolsos" onclick="toggleBolsos()" id="btnBolsos">
-  Ver Bolsos
- </button>
+<section class="products fade-in" id="coleccion">
 
-    <div class="product-grid" id="listaBolsos" style="display: none;">
+  <h2 data-es="Nuestra Colección" data-en="Our Collection">
+    Nuestra Colección
+  </h2>
 
-      <div class="product-card">
-    <div class="product-image">
+  <button class="btn-ver-bolsos" onclick="toggleBolsos()" id="btnBolsos">
+    Ver Bolsos
+  </button>
+
+  <div class="product-grid" id="listaBolsos" style="display:none;">
+
+    <!-- 1 -->
+    <div class="product-card">
+      <div class="product-image">
         <img src="assets/images/bolso1.jpg"
-        onclick="openModal('assets/images/bolso1.jpg','Bolso Elegante Red Gris 1','$85.000 COP')"
-        alt="Bolso Elegante">
+        data-title="Bolso Elegante Red Gris 1"
+        data-price="85000"
+        data-colors="#5b5b5b,#a8a8a8,#2c2c2c"
+        onclick="openCollection(this)">
         <span class="sold-badge">Agotado</span>
+      </div>
+      <h3>Bolso Elegante Red Gris 1</h3>
+      <p class="price">$85.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#5b5b5b"></span>
+        <span style="background:#a8a8a8"></span>
+        <span style="background:#2c2c2c"></span>
+      </div>
+      <button class="btn-agotado" disabled>Agotado</button>
     </div>
 
-    <h3>Bolso Elegante Red Gris 1</h3>
-    <p class="price">$85.000 COP</p>
-
-    <div class="color-swatches">
-      <span style="background:#5b5b5b;"></span>
-      <span style="background:#a8a8a8;"></span>
-      <span style="background:#2c2c2c;"></span>
+    <!-- 2 -->
+    <div class="product-card">
+      <img src="assets/images/bolso2.jpg"
+      data-title="Bolso Elegante Pequeño Marron 2"
+      data-price="33000"
+      data-colors="#7a4b2a,#b3834d,#3b2414"
+      onclick="openCollection(this)">
+      <h3>Bolso Elegante Pequeño Marron 2</h3>
+      <p class="price">$30.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#7a4b2a"></span>
+        <span style="background:#b3834d"></span>
+        <span style="background:#3b2414"></span>
+      </div>
+      <button onclick="addToCart('Bolso Elegante Pequeño Marron 2',30000)">Comprar</button>
     </div>
 
-    <button class="btn-agotado" disabled>Agotado</button>
-</div>
-
-      
-
-<div class="product-card">
-  <img src="assets/images/bolso2.jpg" 
-  alt="Bolso Elegante"
-  onclick="openModal('assets/images/bolso2.jpg', 'Bolso Elegante Pequeño Marron 2', '$33.000 COP')">
-  <h3>Bolso Elegante Pequeño Marron 2</h3>
-  <p class="price">$33.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#7a4b2a"></span>
-  <span style="background:#b3834d"></span>
-  <span style="background:#3b2414"></span>
-</div>
-
-  <button onclick="addToCart('Bolso Elegante Pequeño Marron 2', 33000)">Comprar</button>
-</div>
-
-<div class="product-card">
-  <img src="assets/images/bolso3.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso3.jpg', 'Bolso Elegante Verde Serpiente 3', '$47.000 COP')">
-  <h3>Bolso Elegante Verde Serpiente 3</h3>
-  <p class="price">$47.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#3e5f44"></span>
-  <span style="background:#6d8b5a"></span>
-  <span style="background:#2b3a2a"></span>
-</div>
-  <button onclick="addToCart('Bolso Elegante Verde Serpiente 3', 47000)">Comprar</button>
-</div>
-
-<div class="product-card">
-  <div class="product-image">
-  <img src="assets/images/bolso4.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso4.jpg', 'Bolso Elegante Leopardo 4', '$30.000 COP')">
-   <span class="sold-badge"> Agotado</span>
- </div>
-
-
-  <h3>Bolso Elegante Leopardo 4</h3>
-  <p class="price">$30.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#c7a56b"></span>
-  <span style="background:#8b5e3c"></span>
-  <span style="background:#1f1f1f"></span>
-</div>
-  <button class="btn-agotado" disabled> Agotado</button>
-</div>
-
-<div class="product-card">
-  <img src="assets/images/bolso5.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso5.jpg', 'Bolso Elegante Azul Multicolor 5', '$50.000 COP')">
-  <h3>Bolso Elegante Azul Multicolor 5</h3>
-  <p class="price">$50.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#2d5fa4"></span>
-  <span style="background:#d4af37"></span>
-  <span style="background:#a7c7e7"></span>
-</div>
-  <button onclick="addToCart('Bolso Elegante Azul Multicolor 5', 50000)">Comprar</button>
-</div>
-
-<div class="product-card">
-
-  <div class="product-image">
-  <img src="assets/images/bolso6.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso6.jpg', 'Bolso Elegante Cuadricula Blanca 6', '$85.000 COP')">
-    <span class="sold-badge"> Agotado </span>
-  </div>
-  
-  <h3>Bolso Elegante Cuadricula Blanca 6</h3>
-  <p class="price">$85.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#ffffff"></span>
-  <span style="background:#dcdcdc"></span>
-  <span style="background:#000000"></span>
-</div>
-  <button class="btn-agotado" disabled> Agotado</button>
-</div>
- 
-<div class="product-card">
-  <div class="product-image"
-  onclick="openModal('assets/images/bolso7.jpg', 'Bolso Elegante Cruzado Verde 7', '$65.000 COP')">
-  <img src="assets/images/bolso7.jpg" alt="Bolso elegante">
-    <span class="sold-badge"> Agotado </span>
-  </div>
-
-  <h3>Bolso Elegante Cruzado Verde 7</h3>
-  <p class="price">$65.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#4f6d52"></span>
-  <span style="background:#8fae8d"></span>
-  <span style="background:#2c3b2c"></span>
-</div>
-  <button class="btn-agotado" disabled> Agotado</button>
-</div>
-
-<div class="product-card">
-  <div class="product-image"
-  onclick="openModal('assets/images/bolso8.jpg', 'Bolso Elegante Cruzado Blanco 8', '$65.000 COP')">
-  <img src="assets/images/bolso8.jpg" alt="Bolso elegante">
-    <span class="sold-badge">Agotado</span>
-  </div>
-  
-  
-  <h3>Bolso Elegante Cruzado Blanco 8</h3>
-  <p class="price">$65.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#ffffff"></span>
-  <span style="background:#e8e8e8"></span>
-  <span style="background:#bfbfbf"></span>
-</div>
-  <button class="btn-agotado" disabled> Agotado</button>
-</div>
-
-<div class="product-card">
-  <img src="assets/images/bolso9.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso9.jpg', 'Bolso Elegante Tote de paja 9', '$28.000 COP')">
-  <h3>Bolso Elegante Grande Tote de paja 9</h3>
-  <p class="price">$28.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#e6d3b3"></span>
-  <span style="background:#cbb79c"></span>
-  <span style="background:#a9957b"></span>
-</div>
-  <button onclick="addToCart('Bolso Elegante Tote de paja 9', 28000)">Comprar</button>
-</div>
-
-<div class="product-card">
-  <img src="assets/images/bolso10.jpg" alt="Bolso elegante"
-  onclick="openModal('assets/images/bolso10.jpg', 'Bolso Elegante Grande Vintaje 10', '$23.000 COP')">
-  <h3>Bolso Elegante Grande Vintage 10</h3>
-  <p class="price">$23.000 COP</p>
-  <div class="color-swatches">
-  <span style="background:#b79b78"></span>
-  <span style="background:#6f4e37"></span>
-  <span style="background:#3e2a1c"></span>
-</div>
-  <button onclick="addToCart('Bolso Elegante Grande Vintage 10', 23000)">Comprar</button>
-</div>
-      
-
+    <!-- 3 -->
+    <div class="product-card">
+      <img src="assets/images/bolso3.jpg"
+      data-title="Bolso Elegante Verde Serpiente 3"
+      data-price="47000"
+      data-colors="#3e5f44,#6d8b5a,#2b3a2a"
+      onclick="openCollection(this)">
+      <h3>Bolso Elegante Verde Serpiente 3</h3>
+      <p class="price">$47.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#3e5f44"></span>
+        <span style="background:#6d8b5a"></span>
+        <span style="background:#2b3a2a"></span>
+      </div>
+      <button onclick="addToCart('Bolso Elegante Verde Serpiente 3',47000)">Comprar</button>
     </div>
-  </section>
+
+    <!-- 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/bolso4.jpg"
+        data-title="Bolso Elegante Leopardo 4"
+        data-price="30000"
+        data-colors="#c7a56b,#8b5e3c,#1f1f1f"
+        onclick="openCollection(this)">
+        <span class="sold-badge">Agotado</span>
+      </div>
+      <h3>Bolso Elegante Leopardo 4</h3>
+      <p class="price">$30.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#c7a56b"></span>
+        <span style="background:#8b5e3c"></span>
+        <span style="background:#1f1f1f"></span>
+      </div>
+      <button class="btn-agotado" disabled>Agotado</button>
+    </div>
+
+    <!-- 5 -->
+    <div class="product-card">
+      <img src="assets/images/bolso5.jpg"
+      data-title="Bolso Elegante Azul Multicolor 5"
+      data-price="50000"
+      data-colors="#2d5fa4,#d4af37,#a7c7e7"
+      onclick="openCollection(this)">
+      <h3>Bolso Elegante Azul Multicolor 5</h3>
+      <p class="price">$50.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#2d5fa4"></span>
+        <span style="background:#d4af37"></span>
+        <span style="background:#a7c7e7"></span>
+      </div>
+      <button onclick="addToCart('Bolso Elegante Azul Multicolor 5',50000)">Comprar</button>
+    </div>
+
+    <!-- 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/bolso6.jpg"
+        data-title="Bolso Elegante Cuadricula Blanca 6"
+        data-price="85000"
+        data-colors="#ffffff,#dcdcdc,#000000"
+        onclick="openCollection(this)">
+        <span class="sold-badge">Agotado</span>
+      </div>
+      <h3>Bolso Elegante Cuadricula Blanca 6</h3>
+      <p class="price">$85.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#ffffff"></span>
+        <span style="background:#dcdcdc"></span>
+        <span style="background:#000000"></span>
+      </div>
+      <button class="btn-agotado" disabled>Agotado</button>
+    </div>
+
+    <!-- 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/bolso7.jpg"
+        data-title="Bolso Elegante Cruzado Verde 7"
+        data-price="65000"
+        data-colors="#4f6d52,#8fae8d,#2c3b2c"
+        onclick="openCollection(this)">
+        <span class="sold-badge">Agotado</span>
+      </div>
+      <h3>Bolso Elegante Cruzado Verde 7</h3>
+      <p class="price">$65.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#4f6d52"></span>
+        <span style="background:#8fae8d"></span>
+        <span style="background:#2c3b2c"></span>
+      </div>
+      <button class="btn-agotado" disabled>Agotado</button>
+    </div>
+
+    <!-- 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/images/bolso8.jpg"
+        data-title="Bolso Elegante Cruzado Blanco 8"
+        data-price="65000"
+        data-colors="#ffffff,#e8e8e8,#bfbfbf"
+        onclick="openCollection(this)">
+        <span class="sold-badge">Agotado</span>
+      </div>
+      <h3>Bolso Elegante Cruzado Blanco 8</h3>
+      <p class="price">$65.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#ffffff"></span>
+        <span style="background:#e8e8e8"></span>
+        <span style="background:#bfbfbf"></span>
+      </div>
+      <button class="btn-agotado" disabled>Agotado</button>
+    </div>
+
+    <!-- 9 -->
+    <div class="product-card">
+      <img src="assets/images/bolso9.jpg"
+      data-title="Bolso Elegante Tote de paja 9"
+      data-price="28000"
+      data-colors="#e6d3b3,#cbb79c,#a9957b"
+      onclick="openCollection(this)">
+      <h3>Bolso Elegante Grande Tote de paja 9</h3>
+      <p class="price">$28.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#e6d3b3"></span>
+        <span style="background:#cbb79c"></span>
+        <span style="background:#a9957b"></span>
+      </div>
+      <button onclick="addToCart('Bolso Elegante Tote de paja 9',28000)">Comprar</button>
+    </div>
+
+    <!-- 10 -->
+    <div class="product-card">
+      <img src="assets/images/bolso10.jpg"
+      data-title="Bolso Elegante Grande Vintage 10"
+      data-price="23000"
+      data-colors="#b79b78,#6f4e37,#3e2a1c"
+      onclick="openCollection(this)">
+      <h3>Bolso Elegante Grande Vintage 10</h3>
+      <p class="price">$23.000 COP</p>
+      <div class="color-swatches">
+        <span style="background:#b79b78"></span>
+        <span style="background:#6f4e37"></span>
+        <span style="background:#3e2a1c"></span>
+      </div>
+      <button onclick="addToCart('Bolso Elegante Grande Vintage 10',23000)">Comprar</button>
+    </div>
+
+  </div>
+</section>
 
   <section class="brand-slider">
   <h2>Mujeres EJBAGS</h2>

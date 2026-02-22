@@ -261,17 +261,28 @@ let currentProduct = {
 };
 
 
-function openModal(image, title, price) {
-    modal.style.display = "flex";
-    modalImage.src = image;
-    modalTitle.textContent = title;
-    modalPrice.textContent = price;
+function openModal(image, title, price, colors = []) {
 
-    currentProduct.title = title;
-    currentProduct.price = parseInt(price.replace(/[^0-9]/g, ""));
+  modal.style.display = "flex";
+  modalImage.src = image;
+  modalTitle.textContent = title;
+  modalPrice.textContent = price;
 
-    quantity = 1;
-    modalQty.textContent = quantity;
+  /* 🔥 PUNTOS DE COLOR */
+  const modalDots = document.getElementById("modalDots");
+  modalDots.innerHTML = "";
+
+  colors.forEach(color=>{
+    const dot = document.createElement("span");
+    dot.style.background = color.trim();
+    modalDots.appendChild(dot);
+  });
+
+  currentProduct.title = title;
+  currentProduct.price = parseInt(price.replace(/[^0-9]/g, ""));
+
+  quantity = 1;
+  modalQty.textContent = quantity;
 }
 
 function changeQty(amount) {
@@ -347,19 +358,9 @@ function openFeatured(el){
   const src = el.getAttribute("src");
   const title = el.getAttribute("data-title");
   const price = parseInt(el.getAttribute("data-price"));
-  const colors = el.getAttribute("data-colors").split(",");
+  const colors = el.dataset.colors ? el.dataset.colors.split(",") : [];
 
-  openModal(src, title, "$" + price.toLocaleString() + " COP");
-
-  /* 👉 PUNTOS DEL MODAL */
-  const modalDots = document.getElementById("modalDots");
-  modalDots.innerHTML = "";
-
-  colors.forEach(color=>{
-    const dot = document.createElement("span");
-    dot.style.background = color;
-    modalDots.appendChild(dot);
-  });
+  openModal(src, title, "$" + price.toLocaleString() + " COP", colors);
 
   currentProduct.title = title;
   currentProduct.price = price;
@@ -394,3 +395,16 @@ function updateFeaturedInfo(index){
 
 }
 updateFeaturedInfo(0);
+
+function openCollection(el){
+
+  const src = el.src;
+  const title = el.dataset.title;
+  const price = parseInt(el.dataset.price);
+  const colors = el.dataset.colors ? el.dataset.colors.split(",") : [];
+
+  openModal(src, title, "$" + price.toLocaleString() + " COP", colors);
+
+  currentProduct.title = title;
+  currentProduct.price = price;
+}
