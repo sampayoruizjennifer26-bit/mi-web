@@ -172,6 +172,7 @@ checkCookies();
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
+overlay.addEventListener("click", closeMenu);
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -407,4 +408,9 @@ function openCollection(el){
 
   currentProduct.title = title;
   currentProduct.price = price;
+}
+
+function closeMenu(){
+  navMenu.classList.remove("active");
+  overlay.classList.remove("active");
 }
