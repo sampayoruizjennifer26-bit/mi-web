@@ -116,7 +116,41 @@
   </div>
 </section>
 
-  <!-- COLECCIÓN -->
+<section class="featured">
+  <h2>Productos Destacados</h2>
+
+  <div class="featured-box">
+    <div class="featured-slider">
+
+  <img class="featured-slide active"
+     src="assets/images/destacados/destacado1.jpg"
+     data-title="Bolso Elegante Cruzado Verde"
+     data-price="65000"
+     onclick="openFeatured(this)">
+
+<img class="featured-slide"
+     src="assets/images/destacados/destacado2.jpg"
+     data-title="Bolso Elegante Cruzado Blanco"
+     data-price="65000"
+     onclick="openFeatured(this)">
+
+<img class="featured-slide"
+     src="assets/images/destacados/destacado3.jpg"
+     data-title="Bolso Elegante Leopardo"
+     data-price="30000"
+     onclick="openFeatured(this)">
+  
+
+</div>
+
+</section>
+
+
+
+
+
+
+   <!-- COLECCIÓN -->
   <section class="products fade-in" id="coleccion">
     <h2
       data-es="Nuestra Colección"
@@ -125,7 +159,7 @@
     </h2>
     <button class="btn-ver-bolsos" onclick="toggleBolsos()" id="btnBolsos">
   Ver Bolsos
-</button>
+ </button>
 
     <div class="product-grid" id="listaBolsos" style="display: none;">
 
@@ -136,6 +170,7 @@
         alt="Bolso Elegante">
         <span class="sold-badge">Agotado</span>
     </div>
+
     <h3>Bolso Elegante Red Gris 1</h3>
     <p class="price">$85.000 COP</p>
     <button class="btn-agotado" disabled>Agotado</button>
@@ -389,6 +424,8 @@
 
   <!-- JS -->
   <script src="js/main.js"></script>
+
+  
 
 </body>
 </html>

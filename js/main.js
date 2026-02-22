@@ -311,3 +311,46 @@ Total: $${currentProduct.price * quantity} COP`;
   window.open(url, "_blank");
 
 }
+
+/* ===== SLIDER DESTACADOS AUTOMÁTICO ===== */
+
+const featuredSlides = document.querySelectorAll(".featured-slide");
+let indexFeatured = 0;
+
+function changeFeaturedSlide(){
+  featuredSlides.forEach(slide => slide.classList.remove("active"));
+
+  indexFeatured++;
+  if(indexFeatured >= featuredSlides.length){
+    indexFeatured = 0;
+  }
+
+  featuredSlides[indexFeatured].classList.add("active");
+}
+
+let featuredInterval = setInterval(changeFeaturedSlide, 3500);
+
+
+
+/* ===== DATOS PRODUCTOS ===== */
+
+const products = {
+  1:{img:"assets/images/destacados/destacado1.jpg", title:"Bolso Elegance Cruzado Verde", price:65000},
+  2:{img:"assets/images/destacados/destacado2.jpg", title:"Bolso Elegante Cruzado Blanco", price:65000},
+  3:{img:"assets/images/destacados/destacado3.jpg", title:"Bolso Elegante Leopardo", price:30000},
+};
+
+
+function openFeatured(el){
+
+  
+
+  const src = el.getAttribute("src");
+  const title = el.getAttribute("data-title");
+  const price = parseInt(el.getAttribute("data-price"));
+
+  openModal(src, title, "$" + price.toLocaleString() + " COP");
+
+  currentProduct.title = title;
+  currentProduct.price = price;
+}
