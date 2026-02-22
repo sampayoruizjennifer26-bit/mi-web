@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".brand-slider .dot");
 let current = 0;
 
 setInterval(() => {
@@ -326,6 +326,7 @@ function changeFeaturedSlide(){
   }
 
   featuredSlides[indexFeatured].classList.add("active");
+  updateFeaturedInfo(indexFeatured);
 }
 
 let featuredInterval = setInterval(changeFeaturedSlide, 3500);
@@ -343,14 +344,53 @@ const products = {
 
 function openFeatured(el){
 
-  
-
   const src = el.getAttribute("src");
   const title = el.getAttribute("data-title");
   const price = parseInt(el.getAttribute("data-price"));
+  const colors = el.getAttribute("data-colors").split(",");
 
   openModal(src, title, "$" + price.toLocaleString() + " COP");
 
+  /* 👉 PUNTOS DEL MODAL */
+  const modalDots = document.getElementById("modalDots");
+  modalDots.innerHTML = "";
+
+  colors.forEach(color=>{
+    const dot = document.createElement("span");
+    dot.style.background = color;
+    modalDots.appendChild(dot);
+  });
+
   currentProduct.title = title;
   currentProduct.price = price;
+
+  const index = [...featuredSlides].indexOf(el);
+  updateFeaturedInfo(index);
 }
+
+const featuredTitle = document.getElementById("featuredTitle");
+const featuredPrice = document.getElementById("featuredPrice");
+const featuredDots = document.getElementById("featuredDots");
+
+function updateFeaturedInfo(index){
+
+  const slide = featuredSlides[index];
+
+  const title = slide.dataset.title;
+  const price = slide.dataset.price;
+  const colors = slide.dataset.colors.split(",");
+
+  featuredTitle.textContent = title;
+  featuredPrice.textContent = "$" + Number(price).toLocaleString() + " COP";
+
+  featuredDots.innerHTML = "";
+
+  colors.forEach(color=>{
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.style.background = color;
+    featuredDots.appendChild(dot);
+  });
+
+}
+updateFeaturedInfo(0);

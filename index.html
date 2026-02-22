@@ -28,12 +28,14 @@
 />
 </head>
 
-<div id="toast" class="toast">
-  Producto agregado al carrito 👜
-</div>
+
 
 
 <body>
+
+  <div id="toast" class="toast">
+  Producto agregado al carrito 👜
+ </div>
 
   <!-- HEADER -->
   <header class="header">
@@ -120,29 +122,41 @@
   <h2>Productos Destacados</h2>
 
   <div class="featured-box">
+
+    <!-- SLIDER SOLO IMÁGENES -->
     <div class="featured-slider">
 
-  <img class="featured-slide active"
-     src="assets/images/destacados/destacado1.jpg"
-     data-title="Bolso Elegante Cruzado Verde"
-     data-price="65000"
-     onclick="openFeatured(this)">
+      <img class="featured-slide active"
+      src="assets/images/destacados/destacado1.jpg"
+      data-title="Bolso Elegante Cruzado Verde"
+      data-price="65000"
+      data-colors="#2f5d50"
+      onclick="openFeatured(this)">
 
-<img class="featured-slide"
-     src="assets/images/destacados/destacado2.jpg"
-     data-title="Bolso Elegante Cruzado Blanco"
-     data-price="65000"
-     onclick="openFeatured(this)">
+      <img class="featured-slide"
+      src="assets/images/destacados/destacado2.jpg"
+      data-title="Bolso Elegante Cruzado Blanco"
+      data-price="65000"
+      data-colors="#f1efe7"
+      onclick="openFeatured(this)">
 
-<img class="featured-slide"
-     src="assets/images/destacados/destacado3.jpg"
-     data-title="Bolso Elegante Leopardo"
-     data-price="30000"
-     onclick="openFeatured(this)">
-  
+      <img class="featured-slide"
+      src="assets/images/destacados/destacado3.jpg"
+      data-title="Bolso Elegante Leopardo"
+      data-price="30000"
+      data-colors="#caa27b,#5a4633,#000000"
+      onclick="openFeatured(this)">
 
-</div>
+    </div>
 
+    <!-- INFO FUERA DEL SLIDER -->
+    <div class="featured-info">
+      <h3 id="featuredTitle">Bolso Elegante Cruzado Verde</h3>
+      <p id="featuredPrice">$65.000 COP</p>
+      <div class="color-dots" id="featuredDots"></div>
+    </div>
+
+  </div>
 </section>
 
 
@@ -173,6 +187,13 @@
 
     <h3>Bolso Elegante Red Gris 1</h3>
     <p class="price">$85.000 COP</p>
+
+    <div class="color-swatches">
+      <span style="background:#5b5b5b;"></span>
+      <span style="background:#a8a8a8;"></span>
+      <span style="background:#2c2c2c;"></span>
+    </div>
+
     <button class="btn-agotado" disabled>Agotado</button>
 </div>
 
@@ -184,6 +205,12 @@
   onclick="openModal('assets/images/bolso2.jpg', 'Bolso Elegante Pequeño Marron 2', '$33.000 COP')">
   <h3>Bolso Elegante Pequeño Marron 2</h3>
   <p class="price">$33.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#7a4b2a"></span>
+  <span style="background:#b3834d"></span>
+  <span style="background:#3b2414"></span>
+</div>
+
   <button onclick="addToCart('Bolso Elegante Pequeño Marron 2', 33000)">Comprar</button>
 </div>
 
@@ -192,6 +219,11 @@
   onclick="openModal('assets/images/bolso3.jpg', 'Bolso Elegante Verde Serpiente 3', '$47.000 COP')">
   <h3>Bolso Elegante Verde Serpiente 3</h3>
   <p class="price">$47.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#3e5f44"></span>
+  <span style="background:#6d8b5a"></span>
+  <span style="background:#2b3a2a"></span>
+</div>
   <button onclick="addToCart('Bolso Elegante Verde Serpiente 3', 47000)">Comprar</button>
 </div>
 
@@ -205,6 +237,11 @@
 
   <h3>Bolso Elegante Leopardo 4</h3>
   <p class="price">$30.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#c7a56b"></span>
+  <span style="background:#8b5e3c"></span>
+  <span style="background:#1f1f1f"></span>
+</div>
   <button class="btn-agotado" disabled> Agotado</button>
 </div>
 
@@ -213,6 +250,11 @@
   onclick="openModal('assets/images/bolso5.jpg', 'Bolso Elegante Azul Multicolor 5', '$50.000 COP')">
   <h3>Bolso Elegante Azul Multicolor 5</h3>
   <p class="price">$50.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#2d5fa4"></span>
+  <span style="background:#d4af37"></span>
+  <span style="background:#a7c7e7"></span>
+</div>
   <button onclick="addToCart('Bolso Elegante Azul Multicolor 5', 50000)">Comprar</button>
 </div>
 
@@ -226,6 +268,11 @@
   
   <h3>Bolso Elegante Cuadricula Blanca 6</h3>
   <p class="price">$85.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#ffffff"></span>
+  <span style="background:#dcdcdc"></span>
+  <span style="background:#000000"></span>
+</div>
   <button class="btn-agotado" disabled> Agotado</button>
 </div>
  
@@ -238,6 +285,11 @@
 
   <h3>Bolso Elegante Cruzado Verde 7</h3>
   <p class="price">$65.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#4f6d52"></span>
+  <span style="background:#8fae8d"></span>
+  <span style="background:#2c3b2c"></span>
+</div>
   <button class="btn-agotado" disabled> Agotado</button>
 </div>
 
@@ -251,6 +303,11 @@
   
   <h3>Bolso Elegante Cruzado Blanco 8</h3>
   <p class="price">$65.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#ffffff"></span>
+  <span style="background:#e8e8e8"></span>
+  <span style="background:#bfbfbf"></span>
+</div>
   <button class="btn-agotado" disabled> Agotado</button>
 </div>
 
@@ -259,6 +316,11 @@
   onclick="openModal('assets/images/bolso9.jpg', 'Bolso Elegante Tote de paja 9', '$28.000 COP')">
   <h3>Bolso Elegante Grande Tote de paja 9</h3>
   <p class="price">$28.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#e6d3b3"></span>
+  <span style="background:#cbb79c"></span>
+  <span style="background:#a9957b"></span>
+</div>
   <button onclick="addToCart('Bolso Elegante Tote de paja 9', 28000)">Comprar</button>
 </div>
 
@@ -267,6 +329,11 @@
   onclick="openModal('assets/images/bolso10.jpg', 'Bolso Elegante Grande Vintaje 10', '$23.000 COP')">
   <h3>Bolso Elegante Grande Vintage 10</h3>
   <p class="price">$23.000 COP</p>
+  <div class="color-swatches">
+  <span style="background:#b79b78"></span>
+  <span style="background:#6f4e37"></span>
+  <span style="background:#3e2a1c"></span>
+</div>
   <button onclick="addToCart('Bolso Elegante Grande Vintage 10', 23000)">Comprar</button>
 </div>
       
@@ -410,6 +477,7 @@
 
     <h3 id="modalTitle"></h3>
     <p class="modal-price" id="modalPrice"></p>
+    <div class="color-dots" id="modalDots"></div>
 
     <div class="quantity-selector">
       <button onclick="changeQty(-1)">-</button>
