@@ -1610,5 +1610,22 @@ h1, h2, h3 {
   pointer-events: auto;
 }
 
+/* ===== DESTACADOS MOBILE MÁS GRANDE ===== */
+@media (max-width: 768px){
+
+  .featured-box{
+    padding:20px;
+  }
+
+  .featured-slider{
+    height:420px; /* 🔥 más alto */
+  }
+
+  .featured-slide{
+    object-fit:contain;
+  }
+
+}
+
 
 
