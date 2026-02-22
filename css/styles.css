@@ -1111,12 +1111,24 @@ h1, h2, h3 {
     background-size: cover;
   }
 
+
+
   .hero-content h1 {
     font-size: 2.2rem;
     line-height: 1.2;
   }
-
+  
+@media (max-width: 768px) {
+  .hero-home {
+    background-image: url("../img/hero-mobile.jpg");
+    min-height: 65vh;
+    background-position: center;
+    background-size: cover;
+  }
 }
+}
+
+
 
 @media (max-width: 768px) {
 
