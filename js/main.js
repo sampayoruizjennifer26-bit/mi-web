@@ -97,6 +97,7 @@ function animateCart() {
 function openCart() {
   document.getElementById("cart-panel").classList.add("open");
   document.getElementById("cart-overlay").classList.add("show");
+  document.querySelector(".cart-icon-header").blur();
 }
 
 function closeCart() {

@@ -1851,6 +1851,18 @@ h1, h2, h3 {
   }
 }
 
+/* 🔥 FIX CARRITO MÓVIL — quitar dorado pegado */
+.cart-icon-header:focus,
+.cart-icon-header:active{
+  color: black;
+  outline: none;
+}
+
+/* evitar highlight raro en móvil */
+.cart-icon-header{
+  -webkit-tap-highlight-color: transparent;
+}
+
 
 
 
