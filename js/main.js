@@ -414,3 +414,14 @@ function closeMenu(){
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+function toggleFooter(el){
+  const parent = el.parentElement;
+  parent.classList.toggle("active");
+}
+
+document.querySelectorAll(".footer-title").forEach(title => {
+  title.addEventListener("click", () => {
+    title.parentElement.classList.toggle("active");
+  });
+});
