@@ -1379,10 +1379,14 @@ h1, h2, h3 {
   transition: transform 0.3s ease;
 }
 
-.cart-icon-header:hover {
-  transform: scale(1.1);
-  color: var(--gold);
+@media (hover:hover){
+  .cart-icon-header:hover{
+    transform: scale(1.1);
+    color: var(--gold);
+  }
 }
+
+
 
 /* Contador */
 .cart-icon-header #cart-count {
@@ -1865,6 +1869,21 @@ h1, h2, h3 {
 }
 .cart-icon-header.active{
   color: var(--gold);
+}
+/* 🔥 FIX DEFINITIVO iPhone carrito */
+.cart-icon-header:focus,
+.cart-icon-header:active{
+  color: black !important;
+  outline: none;
+}
+
+.cart-icon-header{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* solo dorado cuando carrito abierto */
+.cart-icon-header.active{
+  color: var(--gold) !important;
 }
 
 

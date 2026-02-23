@@ -101,10 +101,19 @@ function openCart() {
 }
 
 function closeCart() {
-  document.getElementById("cart-panel").classList.remove("open");
-  document.getElementById("cart-overlay").classList.remove("show");
-  document.querySelector(".cart-icon-header").classList.remove("active");
+  const panel = document.getElementById("cart-panel");
+  const overlay = document.getElementById("cart-overlay");
+  const icon = document.querySelector(".cart-icon-header");
+
+  panel.classList.remove("open");
+  overlay.classList.remove("show");
+  icon.classList.remove("active");
+
+  // 🔥 FIX iPhone Safari
+  icon.blur();
+  document.activeElement.blur();
 }
+
 function changeCartQty(index, change) {
   cart[index].qty += change;
 
