@@ -1861,6 +1861,10 @@ h1, h2, h3 {
 /* evitar highlight raro en móvil */
 .cart-icon-header{
   -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.cart-icon-header.active{
+  color: var(--gold);
 }
 
 

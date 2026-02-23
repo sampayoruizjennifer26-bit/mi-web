@@ -97,12 +97,13 @@ function animateCart() {
 function openCart() {
   document.getElementById("cart-panel").classList.add("open");
   document.getElementById("cart-overlay").classList.add("show");
-  document.querySelector(".cart-icon-header").blur();
+  document.querySelector(".cart-icon-header").classList.add("active");
 }
 
 function closeCart() {
   document.getElementById("cart-panel").classList.remove("open");
   document.getElementById("cart-overlay").classList.remove("show");
+  document.querySelector(".cart-icon-header").classList.remove("active");
 }
 function changeCartQty(index, change) {
   cart[index].qty += change;
