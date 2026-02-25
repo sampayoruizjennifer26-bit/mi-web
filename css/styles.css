@@ -1788,8 +1788,8 @@ h1, h2, h3 {
 
 /* ACORDEÓN */
 .footer-item{
-  border-top:1px solid #333;
-  padding:15px 0;
+  
+  padding:6px 0;
 }
 
 .footer-title{
@@ -1884,6 +1884,38 @@ h1, h2, h3 {
 /* solo dorado cuando carrito abierto */
 .cart-icon-header.active{
   color: var(--gold) !important;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+#about,
+#contact{
+  scroll-margin-top: 120px;
+}
+
+
+
+.footer-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  width: fit-content;
+}
+
+.footer-title i{
+  margin-left: 6px;
+}
+
+.footer-item.active .footer-title i{
+  transform: rotate(180deg);
+  color: var(--gold);
+}
+
+.footer-accordion{
+  max-width: 500px;  
 }
 
 

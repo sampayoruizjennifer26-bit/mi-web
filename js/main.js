@@ -436,3 +436,21 @@ document.querySelectorAll(".footer-title").forEach(title => {
     title.parentElement.classList.toggle("active");
   });
 });
+
+function openFooter(id){
+
+  setTimeout(()=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+
+    el.classList.add("active");
+
+    // cerrar el otro acordeón
+    document.querySelectorAll(".footer-item").forEach(item=>{
+      if(item.id !== id){
+        item.classList.remove("active");
+      }
+    });
+
+  },300); // pequeño delay para esperar el scroll
+}
